@@ -8,7 +8,7 @@ def get_data(tone):
     dates = []
     score = []
     analyzer = SentimentIntensityAnalyzer()
-    filepaths = glob.glob("diary/*.txt")
+    filepaths = sorted(glob.glob("diary/*.txt"))
     for filepath in filepaths:
         filepath = pathlib.Path(filepath)
         date = filepath.stem
